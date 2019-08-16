@@ -1,0 +1,24 @@
+server: 
+  port: 81
+
+spring:
+  flyway:
+    enabled: false
+  #    baseline-on-migrate: true
+  #    baseline-version: 1.1
+  datasource:
+    url: jdbc:mysql://ip:port/your_db_name?useSSL=false&characterEncoding=utf8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: db_username
+    password: db_password
+    hikari:
+      max-lifetime: 18000
+
+  application:
+    name: service-provider
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 114.115.169.23:8848
+        ip: 114.115.169.23

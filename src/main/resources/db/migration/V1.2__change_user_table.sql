@@ -1,0 +1,1 @@
+alter table user add COLUMN address VARCHAR(100) DEFAULT NULL;
