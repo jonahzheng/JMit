@@ -1,5 +1,5 @@
 # Java Microservices Instance template(JMit)
-基于spring boot 的微服务实例模板，只需简单的配置，就开启一个你自己的微服务实例
+java的微服务实例模板，只需简单的配置，就开启一个你自己的微服务实例
 
 
 ## 特性

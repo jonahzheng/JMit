@@ -74,6 +74,12 @@
 			<artifactId>httpclient</artifactId>
 			<version>4.5.9</version>
 		</dependency>
+
+		<dependency>
+			<groupId>de.siegmar</groupId>
+			<artifactId>logback-gelf</artifactId>
+			<version>2.0.0</version>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
@@ -150,6 +156,7 @@
 					<url>${spring.datasource.url}</url>
 					<user>${spring.datasource.username}</user>
 					<password>${spring.datasource.password}</password>
+					<baselineOnMigrate>${spring.flyway.baseline-on-migrate}</baselineOnMigrate>
 					<locations>
 						<location>filesystem:src/main/resources/db/migration</location>
 					</locations>
@@ -180,7 +187,7 @@
 									<includes>.*</includes>
 									<excludes></excludes>
 									<dateAsTimestamp>true</dateAsTimestamp>
-									<inputSchema>test</inputSchema>
+									<inputSchema>${spring.datasource.name}</inputSchema>
 								</database>
 								<generate>
 									<deprecated>false</deprecated>

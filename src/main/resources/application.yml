@@ -1,10 +1,11 @@
 server: 
-  port: 81
+  port: 8100
 
 spring:
   flyway:
-    enabled: false
-  #    baseline-on-migrate: true
+    enabled: true
+    clean-on-validation-error: false #当发现校验错误时是否自动调用clean，默认false.
+    baseline-on-migrate: true
   #    baseline-version: 1.1
   datasource:
     url: jdbc:mysql://ip:port/your_db_name?useSSL=false&characterEncoding=utf8&useSSL=false
@@ -12,7 +13,8 @@ spring:
     username: db_username
     password: db_password
     hikari:
-      max-lifetime: 18000
+      max-lifetime: 32000
+    name: your_db_name
 
   application:
     name: service-provider
@@ -22,3 +24,12 @@ spring:
       discovery:
         server-addr: 114.115.169.23:8848
         ip: 114.115.169.23
+  ## 配置定时任务最大线程数为3
+  task:
+    scheduling:
+      pool:
+        size: 5
+      thread-name-prefix: Token
+#日志配置说明
+logging:
+  path: /spring_cloud/server
