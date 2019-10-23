@@ -8,6 +8,6 @@ CREATE TABLE `test`.`user` (
   `sex` int(255) DEFAULT NULL COMMENT 'sex',
   `password` varchar(255) DEFAULT NULL,
   `status` int(255) DEFAULT NULL,
-  `headimgurl` varchar(255) DEFAULT NULL COMMENT 'icon'
+  `headimgurl` varchar(255) DEFAULT NULL COMMENT 'icon',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
