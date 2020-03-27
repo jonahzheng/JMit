@@ -11,3 +11,5 @@ java的微服务实例模板，只需简单的配置，就开启一个你自己�
 3、所有的实际业务逻辑通过service接口模式来实现.
 
 4、所有的对外api接口写在controller中.
+
+5、支持alibaba的服务发现配置管理组件[nacos](https://nacos.io/zh-cn/docs/what-is-nacos.html).
