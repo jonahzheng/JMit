@@ -18,7 +18,10 @@ spring:
 
   application:
     name: service-provider
-
+  cloud:
+    nacos:
+      discovery:
+        server-addr: nacos_ip:8848
   ## 配置定时任务最大线程数为3
   task:
     scheduling:
